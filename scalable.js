@@ -1,5 +1,6 @@
-for(var key in window) {
-	var obj = window[key];
+var globalObj = this
+for(var key in globalObj) {
+	var obj = globalObj[key];
 	if (obj instanceof Object) {
 		obj.scalable = true;
 	}
