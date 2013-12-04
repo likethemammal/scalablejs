@@ -1,7 +1,7 @@
-var globalObj = this
+var globalObj = this;
 for(var key in globalObj) {
-	var obj = globalObj[key];
-	if (obj instanceof Object) {
-		obj.scalable = true;
-	}
+    var obj = globalObj[key];
+    if (obj instanceof Object) {
+        obj.scalable = true;
+    }
 }
