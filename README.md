@@ -1,4 +1,4 @@
-scalablejs
+scalablejs <img src="http://i.imgur.com/qJTD9T6.png" width="200px" />
 ==========
 
 Automatically scales any web app perfectly. For realzies, good dealzies.
