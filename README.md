@@ -1,9 +1,44 @@
-scalablejs
+ScalableJS
 ==========
 
 Automatically scales any web app perfectly. For realzies, good dealzies.
 
-<img src="http://i.imgur.com/4PtXfsz.jpg" width="200px" />
+[Patent Pending: #8,589,425](http://www.google.com/patents/US8589425)
+
+## Installation
+
+Just drop the script in whereever you'd like. You can add config options into a file that's referenced by the `data-scale-config` attribute.
+
+```html
+
+
+<script data-scale-config="scale-config.js" src="js/lib/scalable.js"></script>
+
+```
+
+## Usage
+
+Scalable can be used without setting any config options by just not including the `data-scale-config` attribute. Otherwise, options can be set by creating a file and naming it the same thing as the path set in `data-scale-config`. In this case the file would be named "scale-config.js".
+
+The config options are set much like [RequireJS](http://requirejs.org/docs/api.html#config). Right now the only option is `scaleType`. It can be either a single string or an array of strings that define the type of scalableness desired.
+
+```js
+
+
+Scalable.config({
+    scaleType: 'Web2'
+});
+
+```
+
+### Scale Types
+
+The current types of scalability are:
+
+ * `Web2` for Web 2.0.
+ * `BigData` for big data.
+
+If no configurations are set Scalable will just scale for Web 2.0 by default.
 
 ## Contributing
 
