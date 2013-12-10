@@ -49,6 +49,16 @@
                     divs[i].className += ' scalable';
                 }
             }
+        },
+
+        scaleRWD: function() {
+            if (document) {
+                divs = document.getElementsByTagName('div');
+                for(var i = 0; i < divs.length; i++) {
+                    divs[i].style.width = "100%";
+                    divs[i].style['box-sizing'] = "border-box";
+                }
+            }
         }
     };
 

@@ -7,7 +7,7 @@ Automatically scales any web app perfectly. For realzies, good dealzies.
 
 ## Installation
 
-Just drop the script in whereever you'd like. You can add config options into a file that's referenced by the `data-scale-config` attribute.
+Just drop the script in wherever you'd like. You can add config options into a file that's referenced by the `data-scale-config` attribute.
 
 ```html
 
@@ -37,6 +37,7 @@ The current types of scalability are:
 
  * `Web2` for Web 2.0.
  * `BigData` for big data.
+ * `RWD` for responsive web design.
 
 If no configurations are set Scalable will just scale for Web 2.0 by default.
 
