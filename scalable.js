@@ -1,21 +1,35 @@
 (function(globalObj){
 
-    var script,
-        divs,
+    var divs,
         Scalable = {
 
         config: function(options) {
             Scalable.scaleType = options.scaleType;
             Scalable.license = options.license;
-            this.executeScalable();
+            this.testType = options.testType;
+            this.executeScaling();
         },
 
-        executeScalable: function() {
+        executeScaling: function() {
             if (typeof Scalable.scaleType === "string") {
                 Scalable["scale" + Scalable.scaleType]();
             } else if (Scalable.scaleType instanceof Array) {
                 for (var i = 0; i < Scalable.scaleType.length; i++) {
                     Scalable["scale" + Scalable.scaleType[i]]();
+                }
+            }
+
+            if (this.testType) {
+                this.executeTests();
+            }
+        },
+
+        executeTests: function() {
+            if (typeof this.testType === "string") {
+                this["test" + this.testType]();
+            } else if (this.testType instanceof Array) {
+                for (var i = 0; i < this.testType.length; i++) {
+                    this["test" + this.testType[i]]();
                 }
             }
         },
@@ -45,7 +59,7 @@
         scaleWeb2: function() {
             if (document) {
                 divs = document.getElementsByTagName('div');
-                for(var i = 0; i < divs.length; i++) {
+                for (var i = 0; i < divs.length; i++) {
                     divs[i].className += ' scalable';
                 }
             }
@@ -54,23 +68,34 @@
         scaleRWD: function() {
             if (document) {
                 divs = document.getElementsByTagName('div');
-                for(var i = 0; i < divs.length; i++) {
+                for (var i = 0; i < divs.length; i++) {
                     divs[i].style.width = "100%";
                     divs[i].style['box-sizing'] = "border-box";
                 }
             }
+        },
+
+        testUnit: function() {
+            var boolean = true;
+            if (boolean) {
+                console.log('%c Oh my heavens! ', 'background: #222; color: #bada55');
+            }
         }
     };
+
+    globalObj.Scalable = Scalable;
 
     if (document) {
         var body,
             configSrc,
-            configScript;
+            configScript,
+            scripts,
+            script;
 
-        script = document.getElementsByTagName("script")
-        script = script[script.length - 1];
+        scripts = document.getElementsByTagName("script");
+        script = scripts[scripts.length - 1];
 
-        if(script.hasAttribute('data-scale-config')) {
+        if (script.hasAttribute('data-scale-config')) {
             body = document.getElementsByTagName('body')[0];
             configSrc = script.getAttribute('data-scale-config');
             configScript = document.createElement('script');
@@ -83,6 +108,5 @@
         }
     }
 
-    globalObj.Scalable = Scalable;
 
 })(this);
