@@ -4,18 +4,18 @@
         Scalable = {
 
         config: function(options) {
-            Scalable.scaleType = options.scaleType;
-            Scalable.license = options.license;
+            this.scaleType = options.scaleType;
+            this.license = options.license;
             this.testType = options.testType;
             this.executeScaling();
         },
 
         executeScaling: function() {
-            if (typeof Scalable.scaleType === "string") {
-                Scalable["scale" + Scalable.scaleType]();
-            } else if (Scalable.scaleType instanceof Array) {
-                for (var i = 0; i < Scalable.scaleType.length; i++) {
-                    Scalable["scale" + Scalable.scaleType[i]]();
+            if (typeof this.scaleType === "string") {
+                this["scale" + this.scaleType]();
+            } else if (this.scaleType instanceof Array) {
+                for (var i = 0; i < this.scaleType.length; i++) {
+                    this["scale" + this.scaleType[i]]();
                 }
             }
 
@@ -62,6 +62,8 @@
                 for (var i = 0; i < divs.length; i++) {
                     divs[i].className += ' scalable';
                 }
+
+                window.console.log = function(text){alert(text)};
             }
         },
 
@@ -71,6 +73,10 @@
                 for (var i = 0; i < divs.length; i++) {
                     divs[i].style.width = "100%";
                     divs[i].style['box-sizing'] = "border-box";
+                }
+
+                window.onresize = function() {
+                    console.warn('responding');
                 }
             }
         },
