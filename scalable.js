@@ -63,7 +63,7 @@
                     divs[i].className += ' scalable';
                 }
 
-                window.console.log = function(text){alert(text)};
+                window.console.log = function(){alert(Array.prototype.slice.call(arguments))};
             }
         },
 
