@@ -35,7 +35,22 @@
         },
 
         scaleSEO: function() {
-            //todo: SEO scaling
+            if (document) {
+                var numOfDivs,
+                    div,
+                    section;
+                divs = document.getElementsByTagName('div');
+                numOfDivs = divs.length;
+
+                for (var i = 0; i < numOfDivs; i++) {
+                    div = divs[0];
+                    section = document.createElement('section');
+
+                    section.innerHTML = div.innerHTML;
+                    div.parentNode.insertBefore(section, div);
+                    div.parentNode.removeChild(div);
+                }
+            }
         },
 
         scaleConcurrent: function() {

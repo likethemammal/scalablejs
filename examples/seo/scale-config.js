@@ -1,4 +1,4 @@
 Scalable.config({
-    scaleType: 'Web2',
+    scaleType: 'SEO',
     testType: 'Unit'
 });
