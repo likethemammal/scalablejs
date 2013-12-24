@@ -62,13 +62,28 @@
         },
 
         scaleBigData: function() {
-            for (var key in globalObj) {
-                var obj = globalObj[key];
-                if (obj instanceof Object) {
-                    obj.scalable = true;
-                    obj.optimized = true;
+            var objList = [],
+                child,
+                childName;
+
+            function traverseObj(obj) {
+                for (var i = 0; i < Object.keys(obj).length; i++) {
+                    child = obj[Object.keys(obj)[i]];
+                    childName = Object.keys(obj)[i];
+
+                    if (child instanceof Object && !(child instanceof Function)) {
+                        if (objList.indexOf(childName) < 0) {
+                            obj[childName].scalable = true;
+                            obj[childName].optimized = true;
+                            
+                            objList.push(childName);
+                            traverseObj(child);
+                        }
+                    }
                 }
             }
+
+            traverseObj(globalObj);
         },
 
         scaleWeb2: function() {
