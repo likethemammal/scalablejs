@@ -34,17 +34,25 @@
             }
         },
 
+        // Change all 'div' tags to 'section' tags and copy over all attributes.
         scaleSEO: function() {
             if (document) {
                 var numOfDivs,
                     div,
-                    section;
+                    section,
+                    attr;
+
                 divs = document.getElementsByTagName('div');
                 numOfDivs = divs.length;
 
                 for (var i = 0; i < numOfDivs; i++) {
                     div = divs[0];
                     section = document.createElement('section');
+
+                    for (var j = 0; j < div.attributes.length; j++) {
+                        attr = div.attributes.item(j);
+                        section.setAttribute(attr.nodeName, attr.nodeValue);
+                    }
 
                     section.innerHTML = div.innerHTML;
                     div.parentNode.insertBefore(section, div);
@@ -61,6 +69,7 @@
             //todo: HTML5 scaling
         },
 
+        // Loop through all objects and add the 'scalable' and 'optimized' properties.
         scaleBigData: function() {
             var objList = [],
                 child,
@@ -97,6 +106,7 @@
             }
         },
 
+        // Change the css on all 'divs' to more responsive styles.
         scaleRWD: function() {
             if (document) {
                 divs = document.getElementsByTagName('div');
@@ -111,6 +121,7 @@
             }
         },
 
+        // Test whether the boolean primitive is working...cus you know....it might not be.
         testUnit: function() {
             var boolean = true;
             if (boolean) {
@@ -143,6 +154,5 @@
             });
         }
     }
-
 
 })(this);
