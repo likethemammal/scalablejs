@@ -70,7 +70,7 @@
         },
 
         // Loop through all objects and add the 'scalable' and 'optimized' properties.
-        scaleBigData: function() {
+        scaleBIGDATA: function() {
             var objList = [],
                 child,
                 childName;
