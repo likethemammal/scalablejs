@@ -36,7 +36,7 @@ Scalable.config({
 The current types of scalability are:
 
  * `Web2` for Web 2.0.
- * `BigData` for big data.
+ * `BIGDATA` for big data.
  * `RWD` for responsive web design.
 
 If no configurations are set Scalable will just scale for Web 2.0 by default.
