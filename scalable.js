@@ -65,8 +65,30 @@
             //todo: Concurrent scaling
         },
 
+        //Removes all instances of Flash
         scaleHTML5: function() {
-            //todo: HTML5 scaling
+            var objects = document.getElementsByTagName('object'),
+                embeds = document.getElementsByTagName('embed'),
+                els,
+                el;
+
+            //Convert NodeLists to Array
+            objects = [].slice.call(objects);
+            embeds = [].slice.call(embeds);
+
+            els = objects.concat(embeds);
+
+            for (var i = 0; i < els.length; i++) {
+                el = els[i];
+                if (el.src) {
+                    if (el.src.substring(el.src.length - 4, el.src.length) === ".swf") {
+                        el.parentNode.removeChild(el);
+                    }
+                }
+                if (el.type === "application/x-shockwave-flash") {
+                    el.parentNode.removeChild(el);
+                }
+            }
         },
 
         // Loop through all objects and add the 'scalable' and 'optimized' properties.

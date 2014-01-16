@@ -1,4 +1,4 @@
 Scalable.config({
-    scaleType: 'BigData',
+    scaleType: 'BIGDATA',
     testType: 'Unit'
 });

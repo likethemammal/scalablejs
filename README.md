@@ -38,6 +38,7 @@ The current types of scalability are:
  * `Web2` for Web 2.0.
  * `BIGDATA` for big data.
  * `RWD` for responsive web design.
+ * `HTML5` for HTML5.
 
 If no configurations are set Scalable will just scale for Web 2.0 by default.
 
