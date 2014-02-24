@@ -58,6 +58,8 @@
                     div.parentNode.insertBefore(section, div);
                     div.parentNode.removeChild(div);
                 }
+
+                //todo: replace use of 'div' and 'section' in scripts and style sheets.
             }
         },
 
@@ -139,6 +141,28 @@
 
                 window.onresize = function() {
                     console.warn('responding');
+                }
+            }
+        },
+
+        scaleImages: function() {
+            if (document) {
+                var css = 'img { display: none !important; }',
+                    head = document.head || document.getElementsByTagName('head')[0],
+                    style = document.createElement('style');
+
+                if (document.styleSheets[0]) {
+                    document.styleSheets[0].insertRule(css, 0);
+                } else {
+                    style.type = 'text/css';
+
+                    if (style.styleSheet){
+                        style.styleSheet.cssText = css;
+                    } else {
+                        style.appendChild(document.createTextNode(css));
+                    }
+
+                    head.appendChild(style);
                 }
             }
         },
