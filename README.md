@@ -1,4 +1,4 @@
-ScalableJS
+ScalableJS ![Written entirely in Vanilla JS](http://vanilla-js.com/assets/button.png "Vanilla JS")
 ==========
 
 Automatically scales any web app perfectly. For realzies, good dealzies.
