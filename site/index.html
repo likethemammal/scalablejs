@@ -8,12 +8,24 @@
 </head>
 <body>
 
-<nav class="container">
-    <a href="/" class="active">Learn</a>
-    <a href="/creative/">Docs</a>
-    <a href="/" class="active">Community</a>
-    <a href="/creative/">About</a>
-</nav>
+<div id="nav" class="container">
+    <nav id="desktop-nav">
+        <a class="nav-item" href="#learn">Learn</a>
+        <a class="nav-item" href="http:/github.com/likethemammal/scalablejs">Docs</a>
+        <a class="nav-item" href="#community" class="active">Community</a>
+        <a class="nav-item" href="#about">About</a>
+    </nav>
+    
+    <input id="mobile-nav-open" class="mobile-nav-toggle" type="text" readonly>
+    <input id="mobile-nav-close" class="mobile-nav-toggle" type="text" readonly>
+
+    <nav id="mobile-nav">
+        <a class="nav-item" href="#learn">Learn</a>
+        <a class="nav-item" href="http:/github.com/likethemammal/scalablejs">Docs</a>
+        <a class="nav-item" href="#community" class="active">Community</a>
+        <a class="nav-item" href="#about">About</a>
+    </nav>
+</div>
 
 <div class="header">
 
