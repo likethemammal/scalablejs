@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
-nav {
+#nav {
     position: relative;
     width: 100%;
     height: 80px;
@@ -23,21 +23,69 @@ nav {
     display: block;
 }
 
-nav a {
-    float: left;
-    display: block;
-    line-height: 80px;
-    text-decoration: none;
-    margin: 0px 30px;
+.nav-item {
     color: rgb(51, 51, 51);
+    text-decoration: none;
+    line-height: 80px;
 }
 
-nav a:first-child {
+#desktop-nav .nav-item {
+    float: left;
+    display: block;
+    margin: 0px 30px;
+}
+
+#desktop-nav .nav-item:first-child {
     margin: 0 30px 0 0;
 }
 
-nav a:last-child {
+#desktop-nav .nav-item:last-child {
     margin: 0 0 0 30px;
+}
+
+#mobile-nav {
+    opacity: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    
+    -webkit-transition: 200ms;
+}
+
+#mobile-nav .nav-item {
+    width: 100%;
+    display: block;
+    padding-left: 30px;
+    background: white;
+}
+
+.mobile-nav-toggle {
+    position: absolute;
+    left: -1000px;
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    line-height: 0px;
+    border: none;
+    background: #393f4f;
+    margin: 20px 30px;
+    
+    cursor: pointer;
+    
+    border-radius: 3px;
+}
+
+#mobile-nav-open:focus {
+    left: -1000px;
+}
+
+#mobile-nav-open:focus ~ #mobile-nav-close {
+    left: 0;
+}
+
+#mobile-nav-open:focus ~ #mobile-nav {
+    opacity: 1;
 }
 
 h1, h2, h3, h4 {
@@ -95,7 +143,7 @@ h4 {
 }
 
 .container p {
-    font-size: 1.2em;
+    font-size: 0.95em;
 }
 
 .main {
@@ -110,8 +158,12 @@ h4 {
 }
 
 @media screen and (max-width:505px){
-    nav {
+    #desktop-nav {
         display: none;
+    }
+    
+    #mobile-nav-open {
+        left: 0;
     }
 }
 
