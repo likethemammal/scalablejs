@@ -44,6 +44,7 @@ body {
 }
 
 #mobile-nav {
+    visibility: hidden;
     opacity: 0;
     position: absolute;
     top: 80px;
@@ -86,6 +87,7 @@ body {
 
 #mobile-nav-open:focus ~ #mobile-nav {
     opacity: 1;
+    visibility: visible;
 }
 
 h1, h2, h3, h4 {
@@ -109,12 +111,13 @@ h4 {
     font-size: 1.9em;
 }
 
-.header {
+header {
     position: relative;
     top: 0;
     bottom: 0;
     width: 100%;
     height: 400px;
+    margin-bottom: 30px;
 
     text-align: center;
     color: white;
@@ -140,21 +143,20 @@ h4 {
     position: relative;
     width: 100%;
     padding: 0 30px;
+    margin: 0 auto;
+    max-width: 960px;
 }
 
 .container p {
     font-size: 0.95em;
 }
 
-.main {
-    margin: 0 auto;
-    max-width: 960px;
+.section {
+    margin-bottom: 30px;
 }
 
-.getting-started {
-    position: absolute;
-    padding-top: 30px;
-    max-width: 960px;
+footer {
+    text-align: center;
 }
 
 @media screen and (max-width:505px){
