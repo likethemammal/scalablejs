@@ -135,8 +135,8 @@
             if (document) {
                 divs = document.getElementsByTagName('div');
                 for (var i = 0; i < divs.length; i++) {
-                    divs[i].style.width = "100%";
-                    divs[i].style['box-sizing'] = "border-box";
+                    divs[i].style.setProperty("width", "100%", "!important");
+                    divs[i].style.setProperty("box-sizing", "border-box", "!important");
                 }
 
                 window.onresize = function() {
