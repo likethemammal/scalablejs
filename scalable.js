@@ -173,6 +173,19 @@
             if (boolean) {
                 console.log('%c Oh my heavens! ', 'background: #222; color: #bada55');
             }
+
+            if (boolean === true) {
+                //but is it REALLLY true?
+                console.log('%c Oh LAWDY! ', 'background: #222; color: #bada55');
+            }
+
+            if (boolean === true && boolean === false) {
+                //actual quantum computer
+                console.log('%c qubit is in ENTANGLEMENT state.', 'background: #222; color: #bada55');
+            } else if (boolean == true && boolean == false) {
+                //quantum truthy computer
+                console.log('%c You\'re probably running IE.', 'background: #222; color: #bada55');
+            }
         }
     };
 
