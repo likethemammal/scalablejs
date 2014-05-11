@@ -135,8 +135,8 @@
             if (document) {
                 divs = document.getElementsByTagName('div');
                 for (var i = 0; i < divs.length; i++) {
-                    divs[i].style.setProperty("width", "100%", "!important");
-                    divs[i].style.setProperty("box-sizing", "border-box", "!important");
+                    divs[i].style.width = "100%";
+                    divs[i].style['box-sizing'] = "border-box";
                 }
 
                 window.onresize = function() {
@@ -172,19 +172,6 @@
             var boolean = true;
             if (boolean) {
                 console.log('%c Oh my heavens! ', 'background: #222; color: #bada55');
-            }
-
-            if (boolean === true) {
-                //but is it REALLLY true?
-                console.log('%c Oh LAWDY! ', 'background: #222; color: #bada55');
-            }
-
-            if (boolean === true && boolean === false) {
-                //actual quantum computer
-                console.log('%c qubit is in ENTANGLEMENT state.', 'background: #222; color: #bada55');
-            } else if (boolean == true && boolean == false) {
-                //quantum truthy computer
-                console.log('%c You\'re probably running IE.', 'background: #222; color: #bada55');
             }
         }
     };

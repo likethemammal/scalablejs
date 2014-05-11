@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ScalableJS: Grow the web better.</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
@@ -25,12 +25,15 @@
         <a class="nav-item" href="#community" class="active">Community</a>
         <a class="nav-item" href="#about">About</a>
     </nav>
+    
+    <div id="logo">ScalableJS</div>
 </div>
 
 <header>
     <div class="header-text container">
         <h1>ScalableJS</h1>
         <h2>Grow the web better.</h2>
+        <a href="https://github.com/likethemammal/scalablejs" class="download">Download</a>
     </div>
 </header>
 
@@ -43,11 +46,28 @@
         <p>Because the code is open source and it leverages the power of Vanilla JS, Scalable is one of the quickest and most intuitive frameworks to learn. A strong community and extensive documentation allow the barriers-to-entry to remain minimal.</p>
         <h4>Installation</h4>
         <p>Scalable’s installation is straightforward and easy. Add the script tag below to the bottom of the body tag and set any configuration options in a separate file. Make sure to then referenced the config file in the data-scale-config attribute.</p>
+        <code class="code-block">
+            <span class="navy">&lt;script </span>
+            <span class="teal">data-scale-config=</span>
+            <span class="red">"scale-config.js" </span>
+            <span class="teal">src=</span>
+            <span class="red">"js/lib/scalable.js"</span>
+            <span class="navy">&gt;&lt;/script&gt;</span>
+        </code>
         <h4>Usage</h4>
         <p>Scalable can be used without setting any config options by simply not including the data-scale-config attribute. Otherwise, options can be set by creating a file and naming it the same as the path set in data-scale-config. In this case the file would be named "scale-config.js".</p>
         <p>The config options are set much like <a href="http://requirejs.org/docs/api.html#config">RequireJS</a>. They can be set using a single string or an array of strings that define the type of scalableness desired.</p>
+        <code class="code-block">
+            <pre><span class="nx">Scalable</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
+    <span class="nx">scaleType</span><span class="o">:</span> <span class="red">'Web2'</span>
+<span class="p">});</span></pre>
+        </code><p>All <code class="code-chars">scaleTypes</code> are listed in the <a href="#docs">documentation</a> along with a full explanation of each.</p>
     </div>
 </section>
+
+<div class="dividing-img docs">
+
+</div>
 
 <section id="docs">
     <div class="container">
@@ -64,18 +84,40 @@
     </div>
 </section>
 
+<div class="dividing-img community">
+
+</div>
+
 <section id="about">
     <div class="container">
         <h3>About</h3>
         <p>Scalable was created and is maintained by the <a href="http://twitter.com/likethemammal">Scalable Foundation</a>. Their goal is to move the web forward and sustain a dialog between developers and the rest of the world.</p>
+        <div id="change-log">
+            <h4><a href="https://github.com/likethemammal/scalablejs/commits/master">Change Log</a></h4>
+            <h5>v0.1.0</h5>
+            <p>Inital site implementation.</p>
+            <h5>v0.0.5</h5>
+            <p><code class="code-chars">Image</code> and <code class="code-chars">HTML5</code> scaling added and update to README.</p>
+            <h5>v0.0.4</h5>
+            <p>Added tests and <code class="code-chars">SEO</code> scaling.</p>
+            <h5>v0.0.3</h5>
+            <p>Added the module pattern, the ability to send in options, and the Responsive Web Design option.</p>
+            <h5>v0.0.2</h5>
+            <p>Patented. (12/5/13)</p>
+            <h5>v0.0.1</h5>
+            <p>Intialization. Basic <code class="code-chars">Web2.0</code> and <code class="code-chars">BigData</code> features.</p>
+        </div>
     </div>
 </section>
+
+<div class="dividing-img about">
+
+</div>
 
 <footer>
     <div class="container">
         <p>ScalableJS is licensed under the <a href="http://www.wtfpl.net/about/">WTFPL.</a></p>
     </div>
 </footer>
-
 </body>
 </html>
