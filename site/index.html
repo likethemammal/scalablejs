@@ -2,16 +2,16 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>ScalableJS: Grow the web better.</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-
 </head>
 <body>
 
 <div id="nav" class="container">
     <nav id="desktop-nav">
         <a class="nav-item" href="#learn">Learn</a>
-        <a class="nav-item" href="http:/github.com/likethemammal/scalablejs">Docs</a>
+        <a class="nav-item" href="http://github.com/likethemammal/scalablejs">Docs</a>
         <a class="nav-item" href="#community" class="active">Community</a>
         <a class="nav-item" href="#about">About</a>
     </nav>
@@ -21,7 +21,7 @@
 
     <nav id="mobile-nav">
         <a class="nav-item" href="#learn">Learn</a>
-        <a class="nav-item" href="http:/github.com/likethemammal/scalablejs">Docs</a>
+        <a class="nav-item" href="http://github.com/likethemammal/scalablejs">Docs</a>
         <a class="nav-item" href="#community" class="active">Community</a>
         <a class="nav-item" href="#about">About</a>
     </nav>
@@ -42,26 +42,25 @@
         <h3>Getting Started</h3>
         <p>The Scalable library has one simple goal: Scaling. It’s fast, small, and feature-rich, allowing for minimal implementation and zero long-term maintenance. Scalable breaks down the barriers between development and business, which in turn leads to fewer iterations and less bugs.</p>
         <h4>Introduction</h4>
-        <p>The philosophy behind Scalable focuses on making development seem easy. Adding new features should only involve writing code, while testing, debugging, and deployment shouldn’t be requirements at all.</p>
+        <p>The philosophy behind Scalable focuses on making development seem easy. Adding new features should only involve writing code. While testing, debugging, and deployment shouldn’t be requirements at all.</p>
         <p>Because the code is open source and it leverages the power of Vanilla JS, Scalable is one of the quickest and most intuitive frameworks to learn. A strong community and extensive documentation allow the barriers-to-entry to remain minimal.</p>
         <h4>Installation</h4>
-        <p>Scalable’s installation is straightforward and easy. Add the script tag below to the bottom of the body tag and set any configuration options in a separate file. Make sure to then referenced the config file in the data-scale-config attribute.</p>
+        <p>Scalable’s installation is straightforward and easy. Add the script tag below to the bottom of the body tag and set any configuration options in a separate file. Make sure to then reference the config file in the <code class="code-chars">data-scale-config</code> attribute.</p>
+        <p>Remember to download the <a href="https://github.com/likethemammal/scalablejs">latest version</a> of Scalable and include it in the <code class="code-chars">lib</code> directory.</p>
         <code class="code-block">
             <span class="navy">&lt;script </span>
-            <span class="teal">data-scale-config=</span>
-            <span class="red">"scale-config.js" </span>
-            <span class="teal">src=</span>
-            <span class="red">"js/lib/scalable.js"</span>
+            <span class="teal">data-scale-config=</span><span class="red">"scale-config.js" </span>
+            <span class="teal">src=</span><span class="red">"js/lib/scalable.js"</span>
             <span class="navy">&gt;&lt;/script&gt;</span>
         </code>
         <h4>Usage</h4>
-        <p>Scalable can be used without setting any config options by simply not including the data-scale-config attribute. Otherwise, options can be set by creating a file and naming it the same as the path set in data-scale-config. In this case the file would be named "scale-config.js".</p>
-        <p>The config options are set much like <a href="http://requirejs.org/docs/api.html#config">RequireJS</a>. They can be set using a single string or an array of strings that define the type of scalableness desired.</p>
+        <p>Scalable can be used without setting any config options by simply not including the config attribute. Otherwise, options can be set by creating a file and naming it the same as the path set in <code class="code-chars">data-scale-config</code>. In this case the file would be named "scale-config.js".</p>
+        <p>The config options are set much like <a href="http://requirejs.org/docs/api.html#config">RequireJS</a>. In a separate file, call the <code class="code-chars">config</code> function and send in <code class="code-chars">scaleType</code> and the optional <code class="code-chars">scaleTest</code>. These can be set using a single string or an array of strings that define the type of scalableness desired.</p>
         <code class="code-block">
             <pre><span class="nx">Scalable</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
     <span class="nx">scaleType</span><span class="o">:</span> <span class="red">'Web2'</span>
 <span class="p">});</span></pre>
-        </code><p>All <code class="code-chars">scaleTypes</code> are listed in the <a href="#docs">documentation</a> along with a full explanation of each.</p>
+        </code><p>Each <code class="code-chars">scaleType</code> is listed in the <a href="#docs">documentation</a> along with a full explanation.</p>
     </div>
 </section>
 
@@ -101,7 +100,7 @@
             <h5>v0.0.4</h5>
             <p>Added tests and <code class="code-chars">SEO</code> scaling.</p>
             <h5>v0.0.3</h5>
-            <p>Added the module pattern, the ability to send in options, and the Responsive Web Design option.</p>
+            <p>Added the module pattern, the ability to send in options, and the <code class="code-chars">RWD</code> option.</p>
             <h5>v0.0.2</h5>
             <p>Patented. (12/5/13)</p>
             <h5>v0.0.1</h5>

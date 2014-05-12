@@ -357,9 +357,3 @@ footer {
         font-size: .83em;
     }
 }
-
-@media screen and (max-width:325px){
-    * {
-        display: none;
-    }
-}
