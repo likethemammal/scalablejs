@@ -44,9 +44,20 @@ The current types of scalability are:
 
 If no configurations are set Scalable will just scale for Web 2.0 by default.
 
+### Testing Types
+
+By default, Scalable as comes equiped with a testing suite:
+
+ * `Unit` for unit tests.
+ * `IE` for testing with Internet Explorer.
+
 ## Contributing
 
 Feel free to submit a pull request of any code that you've found to automatically scale JS code. We follow a super-strict coding standard documented [here](https://github.com/airbnb/javascript), but if you don't follow it it's no biggy.
+
+### ScalableJS.org
+
+If you're looking to contribute to the [scalablejs.org](http://scalablejs.org) site then navigate to [the `gh-pages` branch](https://github.com/likethemammal/scalablejs/tree/gh-pages) and check out the code there.
 
 ## License
 
