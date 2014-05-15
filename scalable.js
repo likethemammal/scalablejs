@@ -169,22 +169,49 @@
 
         // Test whether the boolean primitive is working...cus you know....it might not be.
         testUnit: function() {
-            var boolean = true;
+            var boolean = true,
+                consoleColors;
             if (boolean) {
-                console.log('%c Oh my heavens! ', 'background: #222; color: #bada55');
+                consoleColors = 'background: #222; color: #bada55';
+                console.log('%c Oh my heavens! ', consoleColors);
             }
 
             if (boolean === true) {
                 //but is it REALLLY true?
-                console.log('%c Oh LAWDY! ', 'background: #222; color: #bada55');
+                consoleColors = 'background: linear-gradient(135deg, #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%); color: #fff';
+                console.log('%c Oh LAWDY! ', consoleColors);
             }
 
             if (boolean === true && boolean === false) {
                 //actual quantum computer
-                console.log('%c qubit is in ENTANGLEMENT state.', 'background: #222; color: #bada55');
-            } else if (boolean == true && boolean == false) {
-                //quantum truthy computer
-                console.log('%c You\'re probably running IE.', 'background: #222; color: #bada55');
+                consoleColors = [
+                                    'background: radial-gradient(ellipse at center',
+                                    '#e100ff 0% ',
+                                    '#0008ff 16% ',
+                                    '#3fff00 38% ',
+                                    '#ffe500 58% ',
+                                    '#ff1a00 79% ',
+                                    '#ff0072 100% ',
+                                    '#ff00ee 100%);',
+                                ] + [
+                                    'color: radial-gradient(ellipse at center',
+                                    '#feffe8 0%',
+                                    '#000000 100%);'
+                                ];
+                console.log('%c qubit is in ENTANGLEMENT state.', consoleColors);
+            }
+        },
+        
+        testIE: function() {
+            var ua = window.navigator.userAgent,
+                msie = ua.indexOf("MSIE "),
+                trident = !!navigator.userAgent.match(/Trident.*rv\:11\./),
+                versionNum;
+
+            if (msie > 0 || trident) {                
+                throw new Error('Bad. No. Bad user. You know what you did. Shame on you.');
+            } else {
+                console.log('Things are gonna work out between us...');
             }
         }
     };
