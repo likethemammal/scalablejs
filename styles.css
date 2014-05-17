@@ -102,10 +102,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-image: url('imgs/menu-icon.svg');
-    
-    -webkit-transition: 250ms;
-    
+    background-image: url('imgs/menu-icon.svg');    
     cursor: pointer;
 }
 
@@ -212,7 +209,11 @@ header {
     font-weight: 600;
     display: inline-block;
     margin-top: 30px;
+    
+    transition: 200ms;
     -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -o-transition: 200ms;
 }
 
 .download:hover {
@@ -274,6 +275,10 @@ section {
     background-image: url('imgs/community.jpg');
 }
 
+.dividing-img.community-2 {
+    background-image: url('imgs/community-2.jpg');
+}
+
 .code-block {
     display: block;
     margin: 25px 0;
@@ -293,6 +298,10 @@ section {
 
 code pre {
     margin: 0;
+}
+
+li {
+    padding-bottom: 10px;
 }
 
 .navy {
